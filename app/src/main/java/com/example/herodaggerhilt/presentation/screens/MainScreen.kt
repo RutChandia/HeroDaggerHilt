@@ -67,10 +67,10 @@ private fun MainScreenContent(
                 .fillMaxWidth()
                 .padding(16.dp),
             colors = TextFieldDefaults.colors(
-                focusedContainerColor = colorScheme.background,
-                unfocusedContainerColor = colorScheme.background,
-                unfocusedPlaceholderColor = colorScheme.primary.copy(alpha = 0.8f),
-                unfocusedIndicatorColor = colorScheme.primary.copy(alpha = 0.8f)
+                focusedContainerColor = colorScheme.surface.copy(alpha = 1.0f),
+                unfocusedContainerColor = colorScheme.surface.copy(alpha = 1.0f),
+                unfocusedIndicatorColor = colorScheme.primary.copy(alpha = 0.8f),
+                unfocusedLabelColor = colorScheme.primary.copy(alpha = 0.8f),
             )
 
         )

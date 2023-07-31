@@ -8,5 +8,7 @@ val VibrantYellow = Color(0xFFFFEB3B)
 val Blue = Color(0xFF1E77C6)
 val DarkFuchsia = Color(0xFFA71DA0)
 
-val BackgroundLight = Color(0xFFE0E0E0)
+val BackgroundLight = Color(0xFFFFFFFF)
 val BackgroundDark = Color(0xFF000000)
+
+val Surface = Color(0xFFFFFFFF)

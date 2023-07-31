@@ -15,11 +15,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
+import com.example.herodaggerhilt.R
 import com.example.herodaggerhilt.domain.model.SuperHero
 
 @Composable
@@ -27,18 +29,19 @@ fun CardView(superHero: SuperHero, onItemClick: (Int) -> Unit) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(10.dp).clickable { onItemClick(superHero.id) },
+            .padding(10.dp)
+            .clickable { onItemClick(superHero.id) },
         elevation =  CardDefaults.cardElevation(
             defaultElevation = 8.dp),
         shape = RoundedCornerShape(10.dp),
         colors = CardDefaults.cardColors(
-            containerColor = colorScheme.background,
+            containerColor = colorScheme.surfaceBright,
         )
     ) {
         Column(modifier = Modifier.padding(bottom = 8.dp)) {
             AsyncImage(
                 model = superHero.imageSmall,
-                contentDescription = "",
+                contentDescription = stringResource(id = R.string.hero_image),
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.height(200.dp)
             )

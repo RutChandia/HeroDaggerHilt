@@ -84,7 +84,11 @@ private fun DetailsScreenTabs(hero: SuperHero?) {
             )
         }
         item {
-            TabRow(selectedTabIndex = pagerState.currentPage) {
+            TabRow(
+                selectedTabIndex = pagerState.currentPage,
+                containerColor = colorScheme.primary,
+                contentColor = colorScheme.surfaceBright
+            ) {
                 tabTitles.forEachIndexed { index, title ->
                     Tab(
                         selected = pagerState.currentPage == index,
